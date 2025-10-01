@@ -1,0 +1,511 @@
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #1c1c1c;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+  color: orange;
+}
+
+.hire-me {
+  background-color: orange;
+  border: none;
+  padding: 12px 25px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.hire-me:hover {
+  background-color: #ff9500;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 60px;
+  gap: 60px;
+  flex-wrap: wrap;
+  min-height: 90vh; /* слайд больше */
+}
+
+.hero-left {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-left p {
+  font-size: 1.4rem;
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.hero-left h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 25px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.socials span {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons button {
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.download-cv {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stats div span {
+  color: orange;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Hero Photo */
+.hero-right {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right .photo {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-image: url('images/photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 4px solid orange;
+}
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #f9b233;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* About Me */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 60px;
+  gap: 60px;
+  flex-wrap: wrap;
+  background-color: #111;
+}
+.about-left {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left .about-photo {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-image: url('images/about-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 4px solid orange;
+}
+
+.about-right {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-right h2 {
+  font-size: 2.8rem;
+  color: orange;
+}
+
+.about-right p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-right .download-cv {
+  width: fit-content;
+  padding: 12px 30px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 60px;
+  text-align: center;
+  background-color: #111;
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: orange;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #222;
+  color: #fff;
+  resize: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  padding: 15px 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: orange;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: #1c1c1c;
+  flex-wrap: wrap;
+}
+
+.footer .logo {
+  font-weight: bold;
+  color: orange;
+  font-size: 1.8rem;
+}
+
+.nav-footer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-footer a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-footer a:hover {
+  color: orange;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .hero, .about {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right, .about-left, .about-right {
+    flex: 1 1 100%;
+  }
+
+  .about-right .download-cv, .hero-buttons {
+    justify-content: center;
+  }
+
+  .header, .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav, .nav-footer {
+    justify-content: center;
+  }
+}
+
+.services {
+  padding: 80px 10%;
+  text-align: center;
+  background: #111; /* тёмный фон как на фото */
+  color: #fff;
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.services p {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  color: #ccc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #f9b233; /* жёлтый цвет иконки/заголовка */
+}
+
+.service-card h3 {
+  color: #f9b233;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.portfolio {
+  padding: 80px 10%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.portfolio p {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  color: #ccc;
+}
+
+.portfolio-filters {
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: none;
+  border: 2px solid #f9b233;
+  color: #f9b233;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+  background: #f9b233;
+  color: #111;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.portfolio-item {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+  color: #f9b233;
+  margin-top: 10px;
+}
+
+.skills {
+  padding: 80px 10%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.skills p {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  color: #ccc;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill {
+  text-align: center;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#f9b233 0%, #f9b233 0%, #1a1a1a 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: 1s;
+}
+
+/* Название навыка */
+.skill h3 {
+  color: #f9b233;
+  margin-top: 5px;
+}
+
