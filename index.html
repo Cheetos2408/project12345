@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">LOGO</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About Me</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact Me</a>
+    </nav>
+    <button class="hire-me">Hire Me</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <p>Hi I am</p>
+      <h1>Sanjar</h1>
+      <h2>UI/UX Designer</h2>
+
+      <div class="socials">
+        <span>IG</span>
+        <span>Dribbble</span>
+        <span>Behance</span>
+      </div>
+
+      <div class="hero-buttons">
+        <button class="hire-me">Hire Me</button>
+        <button class="download-cv">Download CV</button>
+      </div>
+
+      <div class="stats">
+        <div><span>5+</span> Experiences</div>
+        <div><span>20+</span> Project done</div>
+        <div><span>80+</span> Happy Clients</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
+          alt="Random Person" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Services</h2>
+    <p>Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">⚙️</div>
+        <h3>App Design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">💻</div>
+        <h3>Web Design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📱</div>
+        <h3>Mobile UI</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🎨</div>
+        <h3>Graphic Design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛠</div>
+        <h3>Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📊</div>
+        <h3>Analytics</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about">
+    <div class="about-left">
+      <div class="about-photo"></div>
+    </div>
+    <div class="about-right">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate UI/UX designer with experience in creating beautiful and user-friendly digital products.
+        I love turning ideas into intuitive interfaces and enjoyable experiences. My goal is to deliver designs
+        that not only look good but also provide real value to users.
+      </p>
+      <p>
+        Skilled in Figma, Adobe XD, and Photoshop. I work closely with developers to ensure smooth implementation
+        and responsive design. I also enjoy mentoring new designers and collaborating on exciting projects.
+      </p>
+      <button class="download-cv">Download CV</button>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <p>Some of the tools I use and my proficiency level in each.</p>
+
+    <div class="skills-container">
+      <div class="skill">
+        <div class="circle" data-percentage="100">
+          <span>100%</span>
+        </div>
+        <h3>Figma</h3>
+      </div>
+      <div class="skill">
+        <div class="circle" data-percentage="100">
+          <span>100%</span>
+        </div>
+        <h3>Adobe XD</h3>
+      </div>
+      <div class="skill">
+        <div class="circle" data-percentage="85">
+          <span>85%</span>
+        </div>
+        <h3>Adobe Photoshop</h3>
+      </div>
+      <div class="skill">
+        <div class="circle" data-percentage="60">
+          <span>60%</span>
+        </div>
+        <h3>Adobe Illustrator</h3>
+      </div>
+      <div class="skill">
+        <div class="circle" data-percentage="70">
+          <span>70%</span>
+        </div>
+        <h3>Adobe Premiere</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Explore my recent projects across various categories.</p>
+
+    <div class="portfolio-filters">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="website">Website Design</button>
+      <button class="filter-btn" data-filter="mobile">Mobile App Design</button>
+      <button class="filter-btn" data-filter="desktop">Desktop App</button>
+      <button class="filter-btn" data-filter="braiding">Braiding</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Website Design -->
+      <div class="portfolio-item website">
+        <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664" alt="Website Project 1" />
+        <h3>Modern E-commerce Website</h3>
+      </div>
+      <div class="portfolio-item website">
+        <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664" alt="Website Project 2" />
+        <h3>Responsive Business Landing Page</h3>
+      </div>
+
+      <!-- Mobile App Design -->
+      <div class="portfolio-item mobile">
+        <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664" alt="Mobile App Project 1" />
+        <h3>Fitness Tracker App</h3>
+      </div>
+      <div class="portfolio-item mobile">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Mobile App Project 2" />
+        <h3>Recipe Sharing App</h3>
+      </div>
+
+      <!-- Desktop App -->
+      <div class="portfolio-item desktop">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Desktop App Project 1" />
+        <h3>Task Management Software</h3>
+      </div>
+      <div class="portfolio-item desktop">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Desktop App Project 2" />
+        <h3>Inventory Tracking System</h3>
+      </div>
+
+      <!-- Braiding -->
+      <div class="portfolio-item braiding">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Braiding Project 1" />
+        <h3>Creative Cornrow Styles</h3>
+      </div>
+      <div class="portfolio-item braiding">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Braiding Project 2" />
+        <h3>Elegant Box Braids</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Добавляем твой блок с приветствием и кнопкой -->
+  <section class="greeting-section" style="padding: 20px; text-align: center;">
+    <h1 id="greeting">Привет, гость!</h1>
+    <button id="btn">Спросить имя</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo">LOGO</div>
+    <nav class="nav-footer">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About Me</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact Me</a>
+    </nav>
+  </footer>
+
+  <!-- Подключение main.js -->
+  <script src="main.js"></script>
+</body>
+</html>
