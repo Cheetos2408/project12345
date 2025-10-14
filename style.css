@@ -530,3 +530,316 @@ body {
   background-color: #00408d;      /* Ещё темнее при нажатии */
   transform: scale(0.95);         /* Легкое уменьшение */
 }
+
+
+/* ====== БАЗОВЫЙ ПЕРЕХОД ====== */
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== ТЁМНАЯ ТЕМА (по умолчанию) ====== */
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.nav a {
+  color: #f5f5f5;
+}
+.nav a:hover {
+  color: #ffd166;
+}
+
+/* Карточки и секции */
+.service-card {
+  background: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #333;
+}
+
+/* Кнопки */
+.hire-me,
+.download-cv,
+.theme-toggle {
+  background: #ffb703;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.hire-me:hover,
+.download-cv:hover,
+.theme-toggle:hover {
+  background: #ffa600;
+}
+
+/* ====== СВЕТЛАЯ ТЕМА ====== */
+body.light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light .nav a {
+  color: #1a1a1a;
+}
+body.light .nav a:hover {
+  color: #0077ff;
+}
+
+body.light .service-card {
+  background: #f7f7f7;
+  color: #1a1a1a;
+  border: 1px solid #ddd;
+}
+
+body.light .hire-me,
+body.light .download-cv,
+body.light .theme-toggle {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+body.light .hire-me:hover,
+body.light .download-cv:hover,
+body.light .theme-toggle:hover {
+  background: #333;
+}
+
+/* ====== Для текста в hero и about ====== */
+.hero p, 
+.hero h1, 
+.hero h2,
+.about h2, 
+.about p {
+  transition: color 0.3s;
+}
+
+body.light .hero p,
+body.light .hero h1,
+body.light .hero h2,
+body.light .about h2,
+body.light .about p {
+  color: #1a1a1a;
+}
+
+/* ====== Общие базовые стили ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Все ссылки */
+a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffd166;
+}
+
+/* Темная тема по умолчанию */
+.header, .hero, .services, .about, .skills, .portfolio, .contact, .footer {
+  background-color: transparent; /* если нужно, укажи свои цвета */
+  color: inherit;
+}
+
+/* Кнопки */
+button {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ====== Светлая тема ====== */
+body.light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Ссылки для светлой темы */
+body.light a {
+  color: #1a1a1a;
+}
+
+body.light a:hover {
+  color: #0077ff;
+}
+
+/* Карточки услуг */
+.service-card {
+  background: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.light .service-card {
+  background: #f7f7f7;
+  color: #1a1a1a;
+  border: 1px solid #ddd;
+}
+
+/* Кнопки */
+.hire-me,
+.download-cv,
+.theme-toggle {
+  background: #ffb703;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hire-me:hover,
+.download-cv:hover,
+.theme-toggle:hover {
+  background: #ffa600;
+}
+
+body.light .hire-me,
+body.light .download-cv,
+body.light .theme-toggle {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body.light .hire-me:hover,
+body.light .download-cv:hover,
+body.light .theme-toggle:hover {
+  background: #333;
+}
+
+/* Текст в hero и about */
+.hero p, 
+.hero h1, 
+.hero h2,
+.about h2, 
+.about p {
+  transition: color 0.3s;
+  color: inherit;
+}
+
+body.light .hero p,
+body.light .hero h1,
+body.light .hero h2,
+body.light .about h2,
+body.light .about p {
+  color: #1a1a1a;
+}
+
+/* Социальные ссылки */
+.socials span {
+  color: inherit;
+  transition: color 0.3s;
+}
+
+/* Фильтры и портфолио */
+.portfolio-filters button {
+  background: #ffb703;
+  color: #000;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.portfolio-filters button:hover {
+  background: #ffa600;
+}
+
+body.light .portfolio-filters button {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body.light .portfolio-filters button:hover {
+  background: #333;
+}
+
+/* Форма контактов */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #1a1a1a;
+}
+
+.contact-form button {
+  background: #ffb703;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ffa600;
+}
+
+body.light .contact-form button {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body.light .contact-form button:hover {
+  background: #333;
+}
+
+
+/* Дефолтное меню всегда видно */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Для телефонов — прячем и показываем при активном состоянии */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* По умолчанию гамбургер скрыт на компьютере */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+}
