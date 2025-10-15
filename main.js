@@ -73,3 +73,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+// Кнопка «Наверх»
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+// Порог появления (в пикселях)
+const SHOW_AFTER = 300;
+
+// Следим за прокруткой и показываем/скрываем кнопку
+window.addEventListener('scroll', () => {
+  if (window.scrollY > SHOW_AFTER) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+// Плавно прокручиваем к началу страницы
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Плавная прокрутка без подсветки активного пункта
+document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const id = link.getAttribute('href');
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, '', id);
+  });
+});
+
+// При открытии страницы с хэшем (#about) — плавно скроллим к секции
+window.addEventListener('load', () => {
+  const { hash } = window.location;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
