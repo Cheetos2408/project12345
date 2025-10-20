@@ -1,29 +1,34 @@
-// Показываем приветствие
+// === Приветствие ===
 function showGreeting(name) {
   const greeting = document.getElementById('greeting');
-  greeting.textContent = name ? 'Привет, ' + name + '!' : 'Привет, гость!';
+  if (greeting) {
+    greeting.textContent = name ? `Привет, ${name}!` : 'Привет, гость!';
+  }
 }
 
-// Спрашиваем имя
 function askName() {
   const name = prompt('Как тебя зовут?')?.trim();
-  if (name) localStorage.setItem('visitorName', name);
-  else localStorage.removeItem('visitorName');
+  if (name) {
+    localStorage.setItem('visitorName', name);
+  } else {
+    localStorage.removeItem('visitorName');
+  }
   showGreeting(localStorage.getItem('visitorName'));
 }
 
-// Кнопка для запроса имени
-document.getElementById('btn').addEventListener('click', askName);
+document.addEventListener('DOMContentLoaded', () => {
+  const greetBtn = document.getElementById('btn');
+  if (greetBtn) greetBtn.addEventListener('click', askName);
+  showGreeting(localStorage.getItem('visitorName'));
+});
 
-// Если имя уже есть — показываем сразу
-showGreeting(localStorage.getItem('visitorName'));
-
+// === Переключение темы ===
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
-  if (!toggleBtn) return;
-
   const root = document.body;
   const STORAGE_KEY = 'theme';
+
+  if (!toggleBtn) return;
 
   function applyTheme(isLight) {
     if (isLight) {
@@ -37,9 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const saved = localStorage.getItem(STORAGE_KEY);
-  const isLight = saved === 'light';
-  applyTheme(isLight);
+  const savedTheme = localStorage.getItem(STORAGE_KEY);
+  applyTheme(savedTheme === 'light');
 
   toggleBtn.addEventListener('click', () => {
     const newIsLight = !root.classList.contains('light');
@@ -47,55 +51,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// === Бургер-меню ===
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('nav-menu');
+
+  if (!burger || !menu) return;
 
   // Клик по гамбургеру
-  hamburger.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('open');
   });
 
-  // Закрытие при клике на ссылку
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  // Клик по ссылке — закрываем меню (на мобильных)
+  menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' && window.matchMedia('(max-width: 768px)').matches) {
       menu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-    });
+      burger.setAttribute('aria-expanded', 'false');
+    }
   });
 
-  // Закрытие при нажатии Esc
-  document.addEventListener('keydown', e => {
+  // Закрытие по Esc
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.classList.contains('open')) {
       menu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
+      burger.setAttribute('aria-expanded', 'false');
     }
   });
 });
 
-
-// Кнопка «Наверх»
+// === Кнопка "Наверх" ===
 const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-// Порог появления (в пикселях)
 const SHOW_AFTER = 300;
 
-// Следим за прокруткой и показываем/скрываем кнопку
 window.addEventListener('scroll', () => {
   if (window.scrollY > SHOW_AFTER) {
-    scrollTopBtn.classList.add('show');
+    scrollTopBtn?.classList.add('show');
   } else {
-    scrollTopBtn.classList.remove('show');
+    scrollTopBtn?.classList.remove('show');
   }
 });
 
-// Плавно прокручиваем к началу страницы
-scrollTopBtn.addEventListener('click', () => {
+scrollTopBtn?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Плавная прокрутка без подсветки активного пункта
+// === Плавная прокрутка к секциям ===
 document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const id = link.getAttribute('href');
@@ -108,11 +111,15 @@ document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
   });
 });
 
-// При открытии страницы с хэшем (#about) — плавно скроллим к секции
+// === Прокрутка при открытии страницы с хэшем ===
 window.addEventListener('load', () => {
   const { hash } = window.location;
   if (hash) {
     const target = document.querySelector(hash);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
   }
 });
