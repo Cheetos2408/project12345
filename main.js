@@ -123,3 +123,36 @@ window.addEventListener('load', () => {
     }
   }
 });
+
+
+// === Фильтр проектов в Portfolio ===
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  if (!filterButtons.length || !portfolioItems.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.dataset.filter;
+
+      // Активная кнопка
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      portfolioItems.forEach(item => {
+        const isMatch = item.classList.contains(filterValue) || filterValue === 'all';
+
+        if (isMatch) {
+          item.style.display = 'block'; // 👈 возвращаем видимость
+          setTimeout(() => item.classList.add('show'), 10);
+          item.classList.remove('hide');
+        } else {
+          item.classList.add('hide');
+          item.classList.remove('show');
+          setTimeout(() => (item.style.display = 'none'), 300);
+        }
+      });
+    });
+  });
+});
